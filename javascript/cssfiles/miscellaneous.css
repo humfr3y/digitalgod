@@ -1,0 +1,218 @@
+body {
+    background-color: #060606;
+    /* background-image: linear-gradient(black, gold); */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    margin: 0px;
+}
+#topButtons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+#statsSubButtons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+#settingSubButtons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+#mainSubButtons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+#prestigeSubButtons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.titleTab {
+    margin: 0 auto;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.tabButton {
+    border-style: solid;
+    border-radius: 5px;
+    width: 105px;
+    height: 25px;
+    border-color:rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: "Poly"; 
+    font-size: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-right: 5px;
+    white-space: nowrap;
+}
+.tabButton:hover {
+    background-color: rgb(62, 62, 62)
+}
+
+ut { /*title of upgrade */
+    font-weight:900;
+    pointer-events: none; /* текст сообщения не мешает кликать по кнопке */
+    user-select: none;
+}
+
+it {
+    font-style: italic;
+}
+
+.subButton {
+    width: 95px;
+    height: 20px;
+    font-size: 11px
+}
+
+.tooltip {
+    background: #000000;
+    color: white;
+    font-size: 13px;
+    border-radius: 4px;
+    border-color: white;
+    border: 2px solid rgb(255, 255, 255);
+    display: none;
+    width: 180px;
+    text-align: center;
+    word-wrap: break-word;
+    padding: 5px 5px 5px 5px;
+    z-index: 10000;
+
+}
+
+.tooltip[data-show] {
+    display: block;
+}
+
+.arrow,
+.arrow::before {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: inherit;
+    background-color: rgb(0, 0, 0);
+    border: solid 0px;
+    content: '';
+}
+
+.arrow {
+    visibility: visible;
+}
+
+.arrow::before {
+    visibility: visible;
+    transform: rotate(45deg);
+    border-bottom-width: 1.8px;
+    border-right-width: 1.8px;
+    content: '';
+    right: 0px;
+    top: 4px
+}
+
+.tooltip[data-popper-placement^='top'] > .arrow {
+    bottom: 0px;
+}
+
+.tooltip[data-popper-placement^='bottom'] > .arrow {
+    top: -4px;
+}
+
+.tooltip[data-popper-placement^='left'] > .arrow {
+    right: -4px;
+}
+
+.tooltip[data-popper-placement^='right'] > .arrow {
+    left: -4px;
+}
+
+#eventSelect {
+    border-color: red;
+}
+
+#eventSelect:hover {
+    background-color: rgba(255, 0, 0, 0.338);
+}
+
+#spiritualEvent {
+    flex-direction: column;
+}
+
+#automationTab {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.automationContainer {
+    border: 2px solid rgb(202, 255, 248);
+    border-radius: 10px;
+    display: flex;
+    height: 130px;
+    width: 230px;
+    background-color: #101010;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.automationUpgrade, .automationUpgrade2 {
+    border: 2px rgb(202, 255, 248) solid;
+    height: 50px;
+    background-color:  #101010;
+    color: rgb(202, 255, 248);;
+    cursor:pointer;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+
+.automationUpgrade:hover, #autoPrestigeMode:hover, .automationUpgrade2:hover {
+    background-color: rgb(202, 255, 248);;
+    color: black
+}
+
+.automationRow {
+    display:flex;
+    flex-direction: row;
+    margin-bottom:20px
+}
+
+#autoPrestigeMode {
+    border: 2px rgb(202, 255, 248) solid;
+    background-color: #101010;
+    color: rgb(202, 255, 248);
+    cursor: pointer;
+    font-size: 12px;
+    border-bottom: 0px;
+}
+
+.prestigeInput {
+    border: 2px rgb(202, 255, 248) solid;
+    background-color: #222222;
+    color: white;
+}
+
+#autoUmultiInterval, #autoUpowerInterval, #autoUpowerInterval2 {
+    font-size: 12px;
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+input {
+    font-family: 'Poly';
+}

@@ -1,0 +1,152 @@
+
+.achRow {
+    position: relative; /* установить позицию для контейнера */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.ach {
+    position: relative; /* установить позицию для контейнера */
+    border-style: solid;
+    border-radius: 3px;
+    border-color: rgb(255, 101, 101);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90.4px;
+    height: 90.4px;
+    margin-top: 10px;
+    margin: 5px;
+    border-width: 1.8px;
+    z-index:900;
+    display: flex;
+    justify-content: center;
+}
+
+.achRow::after {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7; 
+} 
+
+.ach::after {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(107, 107, 107);
+    opacity: 0.6; 
+} 
+
+.green::after {
+    background-color: rgba(0, 255, 0, 0.5);
+
+}
+
+.greenborder {
+    border-color: rgb(3, 192, 3);
+}
+
+#ach11 {
+    background-image: url("images/ach11.png");
+}
+
+#ach12 {
+    background-image: url("images/ach12.png");
+}
+
+#ach13 {
+    background-image: url("images/ach13.jpg");
+}
+
+#ach14 {
+    background-image: url("images/ach14.jpg");
+}
+
+#ach15 {
+    background-image: url("images/ach15.jpg");
+}
+
+#ach16 {
+    background-image: url("images/ach16.jpg");
+}
+
+#ach17 {
+    background-image: url("images/ach17.jpg");
+}
+
+#ach18 {
+    background-image: url("images/ach18.jpg");
+}
+
+#ach19 {
+    background-image: url("images/ach19.jpg");
+}
+
+#ach20 {
+    background-image: url("images/ach20.jpg");
+}
+
+#ach21 {
+    background-image: url("images/ach21.jpg");
+}
+
+#ach22 {
+    background-image: url("images/ach22.jpg");
+}
+
+#ach23 {
+    background-image: url("images/ach23.jpg");
+}
+
+#ach24 {
+    background-image: url("images/ach24.jpg");
+}
+
+#ach25 {
+    background-image: url("images/ach25.jpg");
+}
+
+#ach26 {
+    background-image: url("images/ach26.jpg");
+}
+
+#ach27 {
+    background-image: url("images/ach27.jpg");
+}
+
+#ach28 {
+    background-image: url("images/ach28.jpg");
+}
+
+#ach29 {
+    background-image: url("images/ach29.jpg");
+}
+
+#ach30 {
+    background-image: url("images/ach30.jpg");
+}
+
+
+#tooltip {
+    /* ... */
+    display: none;
+  }
+  
+  #tooltip[data-show] {
+    display: block;
+  }
+
+.achievementName {
+    font-size: 10px;
+    white-space: normal;
+    color: white;
+    text-shadow: 0.75px 0.75px #000000, -0.75px -0.75px #000000, 0.75px -0.75px #000000, -0.75px 0.75px #000000;
+    text-align: center;
+    z-index: 9999
+}
