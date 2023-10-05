@@ -31,13 +31,13 @@ function saveGame () {
     while ((achRow1.completion).length < 20) {
         (achRow1.completion).push(false);
     }
-    localStorage.setItem('completion', JSON.stringify(achRow1.completion))
+    localStorage.setItem('completionBETA', JSON.stringify(achRow1.completion))
     while (loreBoolean.length < 8) {
         loreBoolean.push(false);
     }
-    localStorage.setItem('chapters', JSON.stringify(loreBoolean))
+    localStorage.setItem('chaptersBETA', JSON.stringify(loreBoolean))
     // сохранить в LocalStorage по ключу коунтдата
-    localStorage.setItem('datasaving', stringifiedData);
+    localStorage.setItem('datasavingBETA', stringifiedData);
     if (isNaN(money)) openWindow('gotNaNed', false)
     
 }
@@ -52,8 +52,8 @@ function loadGame() {
         singleUpgradePurchasedRemove ()
         loadingTheGame();
         singleUpgradePurchased ()
-        const achCompletions = localStorage.getItem('completion')
-        const loreChapters = localStorage.getItem('chapters')
+        const achCompletions = localStorage.getItem('completionBETA')
+        const loreChapters = localStorage.getItem('chaptersBETA')
         if (achCompletions != null){
             achRow1.completion = JSON.parse(achCompletions).map(Boolean);
         }
@@ -152,12 +152,12 @@ function importing(base64) {
     const importedData2 = atob(base64Completion);
     if (base64Chapters != null){
         var importedData3 = atob(base64Chapters)
-            localStorage.setItem('chapters', importedData3);
-            loreBoolean = JSON.parse(localStorage.getItem('chapters')).map(Boolean);
+            localStorage.setItem('chaptersBETA', importedData3);
+            loreBoolean = JSON.parse(localStorage.getItem('chaptersBETA')).map(Boolean);
     }
-    localStorage.setItem('datasaving', importedData1);
-    localStorage.setItem('completion', importedData2);
-    achRow1.completion = JSON.parse(localStorage.getItem('completion')).map(Boolean);
+    localStorage.setItem('datasavingBETA', importedData1);
+    localStorage.setItem('completionBETA', importedData2);
+    achRow1.completion = JSON.parse(localStorage.getItem('completionBETA')).map(Boolean);
 
     achievementGottenRemove ()
     singleUpgradePurchasedRemove ()
@@ -330,7 +330,7 @@ function savingTheGame() {
 }
 
 function loadingTheGame() {
-    let storedData = localStorage.getItem('datasaving'); //спарсим его обратно объект
+    let storedData = localStorage.getItem('datasavingBETA'); //спарсим его обратно объект
     let parsedData = JSON.parse(storedData);
 
     if (parsedData != null) {
